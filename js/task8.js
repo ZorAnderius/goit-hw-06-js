@@ -31,6 +31,8 @@ function onFormSubmitData(event) {
 
   console.log(formData);
 
+  loginFormEl.reset();
+
   //   const formDate = new FormData(event.currentTarget);
 
   //   formDate.forEach((x, y) => {
@@ -105,4 +107,12 @@ const createHTMLElement = ({ tag, className, txtContent }) => {
   elem.textContent = txtContent;
 
   return elem;
+};
+
+const config = {
+  // etc...
+  kit: {
+    // etc...
+    floc: process.env.NODE_ENV === "development",
+  },
 };
